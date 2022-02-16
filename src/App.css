@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+body{
+  overflow: hidden;
+  cursor: none;
+}
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +39,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ball{
+  width: var(--ballDiameter);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+  transform: translate(var(--x),var(--y));
+  transition: 5s transform cubic-bezier(0,1,.07,1);
+}
+.ball2{
+  position: absolute;
+  left: calc(var(--pX) - 10px);
+  top: calc(var(--pY) - 10px);
+  width: 20px;
+  aspect-ratio: 1;
+  background: rgb(64, 255, 230);
+  border-radius: 50%;
+}
+button{
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(45deg ,rgb(255, 161, 19) 10%, rgb(255, 198, 9));
+  color: rgb(43, 43, 43);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 auto;
 }
